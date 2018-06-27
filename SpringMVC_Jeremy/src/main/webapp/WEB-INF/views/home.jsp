@@ -8,7 +8,7 @@
 <h1>
 	Welcome!
 </h1>
-<a href="/form">form</a>
+<a href="/spring_mvc_lab02/form">form</a>
 
 <P>  The time on the server is ${serverTime}. </P>
 </body>

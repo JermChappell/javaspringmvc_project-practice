@@ -9,12 +9,12 @@ public class User {
 	private String city;
 	private String state;
 	
-{
+	public User(){
 	
-}
+	}
 
 	public User(String firstName, String lastName, String phoneNumber, String email, String city, String state) {
-		super();
+		
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.phoneNumber = phoneNumber;
@@ -70,4 +70,5 @@ public class User {
 	public void setState(String state) {
 		this.state = state;
 	}
+}
 	
