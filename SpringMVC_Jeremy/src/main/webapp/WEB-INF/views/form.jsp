@@ -17,7 +17,7 @@
            <legend>Add New User</legend>
 
               <div class="form-group">
-               <label for="name">Name</label>
+               <label for="firstName">First Name</label>
               <div>
                   <form:input id="firstName" path="firstName" type="text"/>
                   <form:errors path="firstName"/>
