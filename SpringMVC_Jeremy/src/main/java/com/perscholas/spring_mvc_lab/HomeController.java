@@ -4,6 +4,8 @@ import java.text.DateFormat;
 import java.util.Date;
 import java.util.Locale;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -23,8 +25,9 @@ public class HomeController {
     /**
      * Simply selects the home view to render by returning its name.
      */
-    @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String home(Locale locale, Model model) {
+    @RequestMapping(value = "/oldHomePage", method = RequestMethod.GET)
+    public String home(Locale locale, Model model, HttpServletRequest request) {
+    	HttpSession session = request.getSession();
         logger.info("Welcome home! The client locale is {}.", locale);
         
         Date date = new Date();
@@ -45,7 +48,7 @@ public class HomeController {
     }
     
     	@RequestMapping(value="/form",method=RequestMethod.POST)
-    	public String processForm(@ModelAttribute("newUser") User newUser){
+    	public String processForm(@ModelAttribute("newUser") User newUser, HttpServletRequest request){
     		return "redirect: /submissionDetails";
     	}
     	
